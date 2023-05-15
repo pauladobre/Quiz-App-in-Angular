@@ -1,0 +1,26 @@
+<body>
+    <div class="container">
+
+        <div class="login">
+            <h1>Login</h1>
+
+            <form (submit)="onLoginSubmit($event)">
+               
+                <label for="email">Enter your email</label>
+                <input [(ngModel)]="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    required [class.error]="errorMessage"> <br>
+                
+                    <label for="password">Enter your password</label>
+                <input [(ngModel)]="password" type="password" name="password" required [class.error]="errorMessage"> 
+                <button type="submit" [disabled]="isInputFilled()">Login</button>
+                <p id="error-login" *ngIf="errorMessage">{{ errorMessage }}</p>
+           
+            </form>
+
+            <div class="register-link">Don't have an account? <a [routerLink]="['/register']">Register now</a></div>
+
+        </div>
+
+    </div>
+
+</body>

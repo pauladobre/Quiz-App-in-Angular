@@ -1,0 +1,11 @@
+<ng-container *ngIf="loginService.getLoggedIn()">
+    <app-navbar></app-navbar>
+  </ng-container>
+  
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+  
+  <ng-container *ngIf="loginService.getLoggedIn()">
+  
+  </ng-container>
+  

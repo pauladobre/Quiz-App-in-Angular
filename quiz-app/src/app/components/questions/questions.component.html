@@ -1,0 +1,13 @@
+<body>
+    <div class="quiz-container">
+        <div class="question-section">
+            <h2 class="quiz-question" [innerHTML]="question"></h2>
+            <h3 class="chosen-category">{{ chosenCategory }}</h3>
+          <p class="question-number">{{ currentQuestion }}/{{ totalQuestions }}</p>
+          <ul class="quiz-options">
+            <li *ngFor="let option of optionsList" (click)="checkAnswer(option)">
+             <span [innerHTML]="option"></span>
+            </li>
+          </ul>
+        </div>
+        <button class="next-btn" [disabled]="!isOptionSelected" (click)="nextQuestion()">Next Question</button>

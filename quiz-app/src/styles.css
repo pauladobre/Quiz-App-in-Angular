@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;700&display=swap);
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+:root {
+    --primary-color: #245953;
+    --secondary-color: #408E91;
+    --tertiary-color: #E49393;
+    --hover-color: #0E8388;
+    --font-color: #434242;
+    --body: #D8D8D8;
+    --label: #A84448;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("src\assets\images\bg-desktop.png") ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+button {
+    padding: 8px;
+    width: 82px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+}
+
+button:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: var(--hover-color);
+}
+
+button:disabled {
+    background-color: #6f9590;
+    cursor: not-allowed;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 14px;
+    padding: 52px;
+    margin-top: 52px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.quiz-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: white;
+    width: 400px;
+    border-radius: 14px;
+    padding: 52px;
+    margin-top: 52px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+@media all and (max-width: 767px) {
+
+    .container {
+        padding: 32px;
+        width: 250px;
+    }
+
+    .quiz-container {
+        width: 250px;
+        border-radius: 14px;
+        padding: 22px;
+        margin-top: 52px;
+    }
+
+    body {
+       
+        background-image: url("src\assets\images\bg-mobile.png") ;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

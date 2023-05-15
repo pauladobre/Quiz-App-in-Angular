@@ -1,0 +1,11 @@
+<body>
+  <div class="quiz-container">
+    <div id="result">
+      <h1>Congratulations!</h1>
+      <h3> You answered <span class="questions-answered">{{ score }}</span> correct answers out of 10!</h3>
+      <h4>Do you want to play again?</h4>
+      <button type="button" id="play-again" (click)="playAgain()" [routerLink]="['/settings']">Play Again!</button>
+      <button type="button" id="score-btn" [routerLink]="['/scoreboard']">See Scoreboard</button>
+    </div>
+  </div>
+</body>

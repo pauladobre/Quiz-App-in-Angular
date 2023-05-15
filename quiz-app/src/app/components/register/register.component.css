@@ -1,0 +1,86 @@
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+input[type=email],
+input[type=password],
+input[type=text] {
+    width: 100%;
+    padding: 12px 44px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+input[type=password] {
+    background-image: url("src\assets\images\icons8-password-24.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+input[type=email] {
+    background-image: url("src\assets\images\icons8-mail-24.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+input[type=text] {
+    background-image: url("src\assets\images\icons8-user-24.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+button {
+    margin-top: 20px;
+}
+
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=text]:focus {
+    border: 2px solid var(--secondary-color);
+}
+
+input.error {
+    border: 2px solid var(--label);
+    background-color: #fee;
+}
+
+input.error:focus {
+    border: 2px solid var(--label);
+    background-color: #fee;
+}
+
+.register-link,
+.login-link {
+    margin-top: 24px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--hover-color);
+    display: inline-block;
+}
+
+#error-register {
+    margin-top: 12px;
+    color: rgb(231, 27, 44);
+}
+
+#error-login {
+    margin-top: 12px;
+    color: rgb(231, 27, 44);
+}

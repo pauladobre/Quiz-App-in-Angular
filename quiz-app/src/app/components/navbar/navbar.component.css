@@ -1,0 +1,127 @@
+.navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: #134E5E;
+    background: -webkit-linear-gradient(to left, #71B280, #134E5E);
+    background: linear-gradient(to left, #71B280, #134E5E);
+    margin-right: 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+i {
+    margin-right: 12px;
+}
+
+.navbar .navbar-anchors a {
+    margin-right: 150px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+.menu-item {
+    transition: 0.4s;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.menu-item svg {
+    margin-right: 5px;
+}
+
+.menu-item:hover {
+    background-color: #ffffff;
+    padding: 20px 8px;
+}
+
+.navbar .navbar-anchors a:hover {
+    color: var(--font-color);
+    font-weight: 700;
+}
+
+.navbar-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 101;
+}
+
+.navbar-toggle-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    color: white;
+    position: relative;
+    transition: background-color 0.3s ease;
+
+}
+
+.navbar-responsive {
+    display: none;
+}
+
+.navbar-toggle-checkbox {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar .navbar-anchors {
+        display: none;
+    }
+
+    .navbar-toggle-label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar-toggle-checkbox {
+        display: none;
+    }
+
+    .navbar-responsive {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        padding: 20px;
+        background-color: var(--primary-color);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .navbar-responsive a {
+        margin-bottom: 30px;
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    .navbar-responsive a:hover {
+        cursor: pointer;
+        color: #71B280;
+        font-weight: 700;
+    }
+
+    .navbar-toggle-checkbox:checked~.navbar-responsive {
+        display: flex;
+    }
+
+
+}

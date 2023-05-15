@@ -1,0 +1,32 @@
+<body>
+  <div class="container">
+    <div class="registration" id="registration-form">
+      <h1>Sign Up</h1>
+
+      <form (submit)="onRegisterSubmit($event)">
+        <label for="name">Enter your name</label><br>
+        <input [(ngModel)]="name" type="text" name="name" required> <br>
+        <label for="email">Enter your email</label>
+        <input [(ngModel)]="email" name="email" id="email-register" class="email" type="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [class.error]="errorMessage" required><br>
+
+        <label for="password">Create a password</label>
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em"
+          xmlns="http://www.w3.org/2000/svg">
+        </svg>
+        <input [(ngModel)]="password" name="password" id="password-register" type="password"
+          [class.error]="errorMessage" required><br>
+
+        <label for="confirm-password">Confirm your password</label>
+        <input [(ngModel)]="passwordConfirm" name="passwordConfirm" id="password-register-confirm" type="password"
+          [class.error]="errorMessage" required>
+
+        <button class="register-btn" [disabled]="isInputFilled()" type="submit">Register</button>
+        <p id="error-register" *ngIf="errorMessage" [innerHTML]="errorMessage"></p>
+      </form>
+
+
+      <div class="login-link">Already have an account? <a [routerLink]="['/login']">Login now</a></div>
+    </div>
+  </div>
+</body>

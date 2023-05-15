@@ -1,0 +1,14 @@
+.footer {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  background: #134E5E;
+  background: -webkit-linear-gradient(to right, #71B280, #134E5E);
+  background: linear-gradient(to right, #71B280, #134E5E);
+  margin-right: 24px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+}

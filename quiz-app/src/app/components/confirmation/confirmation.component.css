@@ -1,0 +1,9 @@
+.container{
+    flex-direction: column;
+    text-align: center;
+    color:var(--font-color);
+}
+
+h2{
+    margin-bottom: 22px;
+}

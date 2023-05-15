@@ -1,0 +1,41 @@
+<body>
+    <div class="settings">
+
+        <h2>Choose your preferences for the Quiz</h2>
+
+        <div class="category">
+            <label for="category" style="display: inline; margin-right: 30px">Category</label>
+            <select name="category" id="category" [(ngModel)]="categoryId" (ngModelChange)="toggleStartButton()" required>
+                <option value="9">General Knowledge</option>
+                <option value="18">Computers</option>
+                <option value="14">Televison</option>
+                <option value="27">Animals</option>
+                <option value="12">Music</option>
+                <option value="11">Film</option>
+                <option value="22">Geography</option>
+            </select>
+        </div>
+
+        <div class="difficulty">
+            <label id="difficulty" for="difficulty">Difficulty</label>
+            <div class="easy">
+                <input value="easy" type="radio" id="easy" name="difficulty" [(ngModel)]="difficultyLevel"  (ngModelChange)="toggleStartButton()"  required>
+                <label for="easy" style="display: inline; margin-left: 8px;">Easy</label>
+            </div>
+
+            <div class="medium">
+                <input value="medium" type="radio" id="medium" name="difficulty" [(ngModel)]="difficultyLevel" (ngModelChange)="toggleStartButton()" >
+                <label for="medium" style="display: inline; margin-left: 8px;">Medium</label>
+            </div>
+
+            <div class="hard">
+                <input value="hard" type="radio" id="hard" name="difficulty" [(ngModel)]="difficultyLevel" (ngModelChange)="toggleStartButton()" >
+                <label for="hard" style="display: inline; margin-left: 8px;">Hard</label>
+            </div>
+        </div>
+        <button id="start" [disabled]="startButtonDisabled" (click)="startQuiz()" [routerLink]="['/questions']">Start</button>
+
+    </div>
+
+
+</body>

@@ -1,0 +1,35 @@
+<header>
+
+  <nav class="navbar">
+    <img class="navbar-logo" src="" alt="">
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle-checkbox">
+    <label class="navbar-toggle-label" for="navbar-toggle">
+      <span class="navbar-toggle-icon">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path>
+        </svg>
+      </span>
+    </label>
+    <nav class="navbar-responsive">
+      <a href="#" [routerLink]="['/home']"> <i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#" [routerLink]="['/settings']"> <i class="fa-solid fa-question"></i>Quizzes</a>
+      <a href="#" [routerLink]="['/scoreboard']"> <i class="fa-solid fa-chart-simple"></i> Scoreboard</a>
+      <a href="#" [routerLink]="['/contact']"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="#" (click)="logout()" [routerLink]="['/login']"> <i
+        class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </nav>
+    <div class="navbar-anchors">
+
+      <a class="menu-item" href="#" [routerLink]="['/home']"><i class="fa fa-fw fa-home"></i> Home</a>
+
+      <a class="menu-item" href="#" [routerLink]="['/settings']"> <i class="fa-solid fa-question"></i> Quizzes</a>
+
+      <a class="menu-item" href="#" [routerLink]="['/scoreboard']"> <i class="fa-solid fa-chart-simple"></i>
+        Scoreboard</a>
+      <a class="menu-item" href="#" [routerLink]="['/contact']"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a class="menu-item" href="#" (click)="logout()" [routerLink]="['/login']"> <i
+          class="fa-solid fa-right-from-bracket"></i>Logout</a>
+    </div>
+  </nav>
+</header>

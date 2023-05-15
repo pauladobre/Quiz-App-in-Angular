@@ -1,0 +1,52 @@
+.welcome {
+    text-align: center;
+    padding: 50px;
+}
+
+h1,
+p {
+    color: var(--font-color);
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+}
+
+button {
+    margin-top: 22px;
+}
+
+.arrow {
+    bottom: 75%;
+    left: 50%;
+    color: var(--font-color);
+    bottom: calc(45% - 120px)
+}
+
+
+.bounce {
+    -moz-animation: bounce 3s infinite;
+    -webkit-animation: bounce 3s infinite;
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}

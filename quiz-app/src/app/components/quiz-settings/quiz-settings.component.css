@@ -1,0 +1,80 @@
+.settings {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 14px;
+    padding: 52px;
+    margin-top: 52px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.settings h2 {
+    margin-bottom: 24px;
+}
+
+.difficulty {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category {
+    margin-bottom: 24px;
+}
+
+.category label {
+    color: var(--label);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#start {
+    margin-top: 32px;
+    text-align: center;
+    width: 100%;
+}
+
+#difficulty {
+    color: var(--label);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.difficulty label {
+    color: var(--font-color);
+    font-weight: bold;
+}
+
+.difficulty input {
+    cursor: pointer;
+}
+
+.settings select {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+    background-color: var(--primary-color);
+    appearance: none;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+.settings select:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+@media all and (max-width: 767px) {
+    .settings {
+        text-align: center;
+        border-radius: 14px;
+        padding: 22px;
+        max-width: 300px;
+        margin-top: 52px;
+    }
+
+}

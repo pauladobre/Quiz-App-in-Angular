@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="form">
+        <h1 class="header">Contact Us</h1>
+        <p class="paragraph">Got a question? We'd love to hear from you. Send us a message <br> and we'll respond as
+            soon
+            as possible. </p>
+
+        <form>
+            <label for="name">Name *</label> <br>
+            <input [(ngModel)]="name" type="text" name="name" required> <br>
+
+            <label for="email">Email Address *</label> <br>
+            <input [(ngModel)]="email" name="email" id="email-register" class="email" type="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br>
+
+            <label for="message">Message *</label> <br>
+            <textarea [(ngModel)]="message" id="message" type="text" name="message" style="height: 100px"></textarea>
+            <br>
+
+            <button (click)="onSubmit($event)" [disabled]="!isFormValid()" [routerLink]="['/confirmation']">Submit</button>
+        </form>
+    </div>
+</div>
